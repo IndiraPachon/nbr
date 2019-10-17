@@ -3,7 +3,7 @@ import xarray as xr
 import numpy as np
 print("Indice de estimación de severidad de fuegos")
 	
-period_green = xarr0["nir"].values
+period_swir1 = xarr0["nir"].values
 period_nir = xarr0["swir1"].values
 mask_nan=np.logical_or(np.isnan(period_nir), np.isnan(period_swir1))
 period_nbr = (period_nir-period_swir1 )/(period_nir+period_swir1 ) 
