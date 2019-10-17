@@ -5,6 +5,8 @@ print("Indice de estimación de severidad de fuegos")
 	
 period_swir1 = xarr0["nir"].values
 period_nir = xarr0["swir1"].values
+
+print("mascara")
 mask_nan=np.logical_or(np.isnan(period_nir), np.isnan(period_swir1))
 period_nbr = (period_nir-period_swir1 )/(period_nir+period_swir1 ) 
 period_nbr[mask_nan]=np.nan
